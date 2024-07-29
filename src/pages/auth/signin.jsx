@@ -29,7 +29,6 @@ function SignIn() {
 
   const onSubmit = async (data) => {
     const res = await authService.login(data);
-    console.log(res);
     if (!(res instanceof HttpError)) {
         saveisAuthenticated(res.token);
         navigate("/");

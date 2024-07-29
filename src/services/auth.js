@@ -7,11 +7,11 @@ import api from "../axios/conf";
 const login = async({ user, password }) => {
     try {
         const response = await api.post(
-            "/api/v1/login", {
+            "DEMO/api/v1/login", {
                 user,
                 password,
             }
-        );
+        )
         if (response.data !== "undefined") {
             localStorage.setItem("token", response.data.token);
             return response.data;
@@ -25,11 +25,11 @@ const login = async({ user, password }) => {
 
 const logout = async() => {
     try {
-        const response = await api.post(
-            "/logout/"
-        );
+        // const response = await api.post(
+        //     "/logout/"
+        // );
         localStorage.removeItem('token');
-        return response.data;
+        // return response.data;
     } catch (error) {
         console.log(error);
         return new HttpError(error);
