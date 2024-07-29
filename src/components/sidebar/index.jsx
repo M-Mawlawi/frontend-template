@@ -164,8 +164,8 @@ function Sidebar() {
   return (
     <div
       className={`flex flex-col h-full ${
-        isOpen || isHovered ? "w-64" : "w-20"
-      } bg-[#0d0e12] duration-200`}
+        isOpen || isHovered ? "w-72" : "w-20"
+      } bg-black duration-200`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

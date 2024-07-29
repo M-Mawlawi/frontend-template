@@ -14,7 +14,13 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<Home/>}
+            element={
+              isAuthenticated ? (
+                <Home/> // Redirect to intendedPath or home
+              ) : (
+                <SignIn/>
+              )
+            }
           />
           <Route
             path="/signin"

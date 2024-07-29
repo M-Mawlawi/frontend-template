@@ -26,6 +26,7 @@ export default {
             'light': '#F1F1F4',
             'highlight': '#F6C000',
             'red': '#F8285A',
+            'text-green-600': 'rgb(34 197 94);'
         },
     },
     plugins: [],

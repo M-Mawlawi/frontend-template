@@ -12,7 +12,7 @@ const login = async({ user, password }) => {
                 password,
             }
         )
-        if (response.data !== "undefined") {
+        if (typeof response.data !== 'undefined' && response.data.token) {
             localStorage.setItem("token", response.data.token);
             return response.data;
         } else {
